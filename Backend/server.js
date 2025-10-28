@@ -6,6 +6,7 @@ import {
   handleCardCreate,
   handleGetCards,
 } from "./controllers/card.controller.js";
+import morgan from "morgan";
 dotenv.config();
 // App Config
 const app = express();
@@ -16,6 +17,9 @@ app.use(express.json());
 
 // Cors Middleware
 app.use(cors({ origin: "*" }));
+
+// Morgan Middleware (for logging requests)
+app.use(morgan("dev"));
 
 // API Endpoints
 app.get("/", (req, res) => {
