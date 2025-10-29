@@ -4,7 +4,7 @@ import TinderCards from '../components/TinderCards'
 import { collection, onSnapshot } from 'firebase/firestore';
 import db from '../database/firebase';
 import { SwipeButtons } from '../components/SwipeButtons';
-import axios from '../../Backend/Api/axios';
+import axios from '../Backend/Api/axios';
 
 export const Tinder = () => {
     const [people, setPeople] = useState([]);
